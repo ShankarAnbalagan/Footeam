@@ -85,17 +85,29 @@ public class MainActivity extends AppCompatActivity {
         populateArrayList();
     }
 
-    public void deleteItemInList(){
+    public void deleteItemInList() {
         String word_to_delete;
-        word_to_delete=enter_player_name.getText().toString();
+        word_to_delete = enter_player_name.getText().toString();
         if (word_to_delete.equals(""))
             return;
-        for(String word: player_name_list){
-            if (word.equals(word_to_delete)){
+        for (String word : player_name_list) {
+            if (word.equals(word_to_delete)) {
                 player_name_list.remove(word_to_delete);
                 break;
             }
         }
         populateArrayList();
     }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+
+    }
+    @Override
+    protected void onResume(){
+        super.onResume();
+
+    }
+
 }

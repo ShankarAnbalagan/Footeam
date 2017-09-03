@@ -5,9 +5,9 @@ package com.example.android.footeamsv1;
  */
 
 public class Sorter extends RandomRange {
-    public int random_order[]=new int[20];
-    public int random_order_a[]=new int[10];
-    public int random_order_b[]=new int[10];
+    int random_order[]=new int[20];
+    int random_order_a[]=new int[10];
+    int random_order_b[]=new int[10];
     public void sorterFunction(int n)
     {
 

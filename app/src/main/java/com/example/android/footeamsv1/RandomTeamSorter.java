@@ -44,8 +44,10 @@ public class RandomTeamSorter extends AppCompatActivity {
     }
 
     public void populateTeam(ListView show_team){
+        ArrayList<String> clonelist= new ArrayList<>();
+        clonelist.addAll(display_name_list);
         ArrayAdapter<String> arrayAdapter =
-                new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, display_name_list);
+                new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, clonelist);
         show_team.setAdapter(arrayAdapter);
         display_name_list.clear();
     }
